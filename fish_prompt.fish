@@ -9,12 +9,12 @@ function _is_git_dirty
 end
 
 function fish_prompt
-  set -l blue (set_color -o blue)
-  set -l green (set_color -o green)
+  set -l yellow (set_color -o f1fa8c)
+  set -l red (set_color -o ff5555)
 
   if [ (_git_branch_name) ]
-    echo -n -s "$green><(((\"> "
+    echo -n -s "$yellow><(((\"> "
   else
-    echo -n -s "$blue><(((\"> "
+    echo -n -s "$red><(((\"> "
   end
 end
